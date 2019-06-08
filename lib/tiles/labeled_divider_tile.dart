@@ -9,7 +9,7 @@ class LabeledDividerTile extends StatelessWidget {
     Key key,
     this.hint,
     this.hideDivider: false,
-    this.isFirst,
+    this.isFirst: false,
   }) : super(key: key);
 
   @override
