@@ -50,10 +50,7 @@ class _TextInputTileState extends State<TextInputTile> {
       leading: Column(
         children: [
           SizedBox(height: 24),
-          Icon(
-            widget.icon,
-            color: Theme.of(context).accentColor,
-          ),
+          Icon(widget.icon),
         ],
       ),
       title: TextFormField(

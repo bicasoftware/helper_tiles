@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 class LabeledDividerTile extends StatelessWidget {
   final String hint;
   final bool hideDivider;
+  final bool isFirst;
 
-  const LabeledDividerTile({Key key, this.hint, this.hideDivider: false})
-      : super(key: key);
+  const LabeledDividerTile({
+    Key key,
+    this.hint,
+    this.hideDivider: false,
+    this.isFirst,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,7 @@ class LabeledDividerTile extends StatelessWidget {
       child: Center(
         child: Column(
           children: <Widget>[
-            hideDivider ? Container() : Divider(),
+            if(isFirst || hideDivider) Container() else Divider(),
             SizedBox(
               width: double.infinity,
               child: Padding(
