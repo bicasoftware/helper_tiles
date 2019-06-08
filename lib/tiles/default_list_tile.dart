@@ -17,10 +17,7 @@ class DefaultListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: onTap,
-      leading: Icon(
-        icon,
-        color: Theme.of(context).accentColor,
-      ),
+      leading: Icon(icon),
       title: leading,
       trailing: trailing,
     );
