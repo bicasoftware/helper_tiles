@@ -6,7 +6,7 @@ import '../formaters.dart';
 class DatePickerTile extends StatelessWidget {
   final String title;
   final IconData icon;
-  final DateTime initialDate;
+  final DateTime initialDate, lastDate;
   final Function(DateTime) onDateSet;
 
   const DatePickerTile({
@@ -15,6 +15,7 @@ class DatePickerTile extends StatelessWidget {
     @required this.onDateSet,
     @required this.initialDate,
     this.icon,
+    this.lastDate,
   }) : super(key: key);
 
   @override
@@ -29,7 +30,7 @@ class DatePickerTile extends StatelessWidget {
           initialDate: initialDate,
           initialDatePickerMode: DatePickerMode.day,
           firstDate: DateTime(1970, 01, 01),
-          lastDate: DateTime(2050, 01, 01),
+          lastDate: lastDate ?? DateTime(2050, 01, 01),
         );
 
         if (selectedDate != null && selectedDate != initialDate) {
