@@ -1,16 +1,15 @@
 name: helper_tiles
 description: A package of useful ListTiles to speedup coding time
 version: 0.0.7
-author:
-homepage:
+
 
 environment:
-  sdk: ">=2.4.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.15.8
+  intl: ^0.16.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
